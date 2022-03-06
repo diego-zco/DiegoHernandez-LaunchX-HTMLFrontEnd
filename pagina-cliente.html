@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cliente de pastelería</title>
+    <style>
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="pagina-cliente.html"><img src="Logo-Pasteleria.png" alt="Pastelería" width="200"></a>
+        <hr>
+        <br><br>
+    </header>
+    <section>
+        <h3>Base del pastel</h3>
+            <label for="pastel">De que la orden</label>
+            <select id="pastel" name="pastel">
+                <option value="Tres leches">Test leches</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Corona">Corona</option>
+                <option value="Light">Light</option>
+            </select><br><br>
+
+        <h3>Sabores de pan</h3>
+            <input type="checkbox" id="chocolate" name="chocolate" value="chocolate">
+            <label for="chocolate">Chocolate</label><br>
+            <input type="checkbox" id="vainilla" name="vainilla" value="vainilla">
+            <label for="vainilla">Vainilla</label><br>
+            <input type="checkbox" id="fresa" name="fresa" value="fresa">
+            <label for="fresa">Fresa</label><br><br>
+
+        <h3>Relleno</h3>
+            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <label for="relleno">Fresa</label><br>
+            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <label for="relleno">Durazno</label><br>
+            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <label for="relleno">Frambuesa</label><br><br>
+        
+        <h3>Adornos</h3>
+            <input type="checkbox" id="betun" name="betun" value="betun">
+            <label for="betun">Betún</label><br>
+            <input type="checkbox" id="chispas" name="chispas" value="chispas">
+            <label for="chispas">Chispas</label><br>
+            <input type="checkbox" id="velas" name="velas" value="velas">
+            <label for="velas">Velas</label><br><br>
+        
+
+        
+
+        <br><br>
+        <form>
+            <h3>Datos del pedido</h3>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre"><br><br>
+            <label for="telefono">Teléfono: </label>
+            <input type="tel" name="telefono" id="telefono"><br><br>
+            <label for="correo">Correo electrónico: </label>
+            <input type="email" name="correo" id="correo"><br><br>
+            <label for="pastel">Descripción del pastel: </label>
+            <input type="text" name="pastel" id="pastel"><br><br>
+            <label for="sabores">Sabores: </label>
+            <input type="text" name="sabores" id="sabores"><br><br>
+            <label for="adornos">Adornos: </label>
+            <input type="text" name="adornos" id="adornos"><br><br>
+
+        </form>
+    </section>
+    <footer>
+        <br><br>
+        <hr>
+        <table class="center">
+            <tr>
+                <td>Dirección: </td>
+                <td>Calzada Nueva York 34, Tepic, Nayarit</td>
+            </tr>
+            <tr>
+                <td>Teléfono: </td>
+                <td>(66) 32 69 1874</td>
+            </tr>
+            <tr>
+                <td>Hoarios de atención: </td>
+                <td>Lunes a Sábado, de 9 am a 7 pm</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
