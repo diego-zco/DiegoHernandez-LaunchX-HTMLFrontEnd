@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cliente de pastelería</title>
+    <style>
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .clientes-tabla {
+        border: 1px solid black;
+    }
+    </style>
+    
+
+</head>
+<body>
+    <header>
+        <a href="pagina-cliente.html"><img src="Logo-Pasteleria.png" alt="Pastelería" width="200"></a>
+        <hr>
+        <br><br>
+    </header>
+    <h1>Un pastel a la medida...</h1><br><br>
+    <section>
+        
+        <h3>Piezas de pan disponible por sabor</h3>
+            <input type="number" id="chocolate-disponible" name="chocolate-disponible" value=4 readOnly>
+            <label for="chocolate-disponible">Chocolate</label><br><br>
+            <input type="number" id="fresa-disponible" name="fresa-disponible" value=9 readOnly>
+            <label for="fresa-disponible">Fresa</label><br><br>
+            <input type="number" id="vainilla-disponible" name="vainilla-disponible" value=15 readOnly>
+            <label for="vainilla-disponible">Vainilla</label><br><br>
+        
+        <h3>Adornos disponible por tipo</h3>
+            <input type="number" id="betun-disponible" name="betun-disponible" value=5000 readOnly>
+            <label for="betun-disponible">Betún en gramos</label><br><br>
+            <input type="number" id="chispas-disponible" name="chispas-disponible" value=8000 readOnly>
+            <label for="chispas-disponible">Chispas en gramos</label><br><br>
+            <input type="number" id="velas-disponible" name="velas-disponible" value=100 readOnly>
+            <label for="velas-disponible">Velas en piezas</label><br><br>
+
+            <h3>Pedidos existentes</h3>
+                <table class="clientes-tabla">
+                    <tr>
+                        <th>Número</th>
+                        <th>Nombre</th>
+                        <th>Base pastel</th>
+                        <th>Sabores</th>
+                        <th>Relleno</th>
+                        <th>Adornos</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ramiro Salas</td>
+                        <td>Tres Leches</td>
+                        <td>Chocolate</td>
+                        <td>Fresa</td>
+                        <td>Velas</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ale Robles</td>
+                        <td>Corona</td>
+                        <td>Fresa, Vainilla</td>
+                        <td>Durazno, Frambuesa</td>
+                        <td>Chispas</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Dario Guzman</td>
+                        <td>Frutas</td>
+                        <td>Vainilla</td>
+                        <td>Durazno</td>
+                        <td>Betún, Velas</td>
+                    </tr>
+                </table>
+    </section>
+    <footer>
+        <br><br>
+        <hr>
+        <table class="center">
+            <tr>
+                <td>Dirección: </td>
+                <td>Calzada Nueva York 34, Tepic, Nayarit</td>
+            </tr>
+            <tr>
+                <td>Teléfono: </td>
+                <td>(66) 32 69 1874</td>
+            </tr>
+            <tr>
+                <td>Horarios de atención: </td>
+                <td>Lunes a Sábado, de 9 am a 7 pm</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

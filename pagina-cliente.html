@@ -9,19 +9,54 @@
     .center {
         margin-left: auto;
         margin-right: auto;
-      }
+    }
     </style>
+
+    <script>
+        function mySelection(){
+            var base = document.getElementById("base-pastel");
+            var sabor = document.getElementById("myInput");
+            var relleno = document.getElementById("relleno-pastel");
+            var adorno = document.getElementById("myInput");
+
+            document.getElementById("pastel-formulario").value = base.value;
+            document.getElementById("relleno-formulario").value = relleno.value;
+
+            var sabores = document.querySelectorAll('.sabor-pan'); 
+            var saboresElegidos = "";
+            for (var i = 0, n=sabores.length; i < n; i++) {
+                if (sabores[i].checked) 
+                {
+                    saboresElegidos += "," + sabores[i].value;
+                }    
+            }
+            document.getElementById("sabores-formulario").value = saboresElegidos;
+
+            var adornos = document.querySelectorAll('.adorno-pastel'); 
+            var adornosElegidos = "";
+            for (var i = 0, n=adornos.length; i < n; i++) {
+                if (adornos[i].checked) 
+                {
+                    adornosElegidos += "," + adornos[i].value;
+                }    
+            }
+            document.getElementById("adornos-formulario").value = adornosElegidos;
+
+        }
+    </script>
 </head>
 <body>
     <header>
         <a href="pagina-cliente.html"><img src="Logo-Pasteleria.png" alt="Pastelería" width="200"></a>
         <hr>
         <br><br>
+        <h1>Un pastel a la medida...</h1><br><br>
     </header>
     <section>
+        
         <h3>Base del pastel</h3>
-            <label for="pastel">De que la orden</label>
-            <select id="pastel" name="pastel">
+            <label for="base-pastel">De que la orden</label>
+            <select id="base-pastel" name="base-pastel">
                 <option value="Tres leches">Test leches</option>
                 <option value="Frutas">Frutas</option>
                 <option value="Corona">Corona</option>
@@ -29,34 +64,34 @@
             </select><br><br>
 
         <h3>Sabores de pan</h3>
-            <input type="checkbox" id="chocolate" name="chocolate" value="chocolate">
+            <input type="checkbox" id="chocolate" name="chocolate" value="chocolate" class="sabor-pan">
             <label for="chocolate">Chocolate</label><br>
-            <input type="checkbox" id="vainilla" name="vainilla" value="vainilla">
+            <input type="checkbox" id="vainilla" name="vainilla" value="vainilla" class="sabor-pan">
             <label for="vainilla">Vainilla</label><br>
-            <input type="checkbox" id="fresa" name="fresa" value="fresa">
+            <input type="checkbox" id="fresa" name="fresa" value="fresa" class="sabor-pan">
             <label for="fresa">Fresa</label><br><br>
 
         <h3>Relleno</h3>
-            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <input type="radio" id="relleno-pastel" name="relleno-pastel" value="fresa">
             <label for="relleno">Fresa</label><br>
-            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <input type="radio" id="relleno-pastel" name="relleno" value="durazno">
             <label for="relleno">Durazno</label><br>
-            <input type="radio" id="relleno" name="relleno" value="relleno">
+            <input type="radio" id="relleno-pastel" name="relleno" value="framebuesa">
             <label for="relleno">Frambuesa</label><br><br>
         
         <h3>Adornos</h3>
-            <input type="checkbox" id="betun" name="betun" value="betun">
+            <input type="checkbox" id="betun" name="betun" value="betun" class="adorno-pastel">
             <label for="betun">Betún</label><br>
-            <input type="checkbox" id="chispas" name="chispas" value="chispas">
+            <input type="checkbox" id="chispas" name="chispas" value="chispas" class="adorno-pastel">
             <label for="chispas">Chispas</label><br>
-            <input type="checkbox" id="velas" name="velas" value="velas">
+            <input type="checkbox" id="velas" name="velas" value="velas" class="adorno-pastel">
             <label for="velas">Velas</label><br><br>
         
-
+        <input type="button" id="seleccion" name="seleccion" value="Guardar seleción" onclick="mySelection()">
         
 
         <br><br>
-        <form>
+        <form action="pedir.js">
             <h3>Datos del pedido</h3>
             <label for="nombre">Nombre: </label>
             <input type="text" name="nombre" id="nombre"><br><br>
@@ -65,11 +100,15 @@
             <label for="correo">Correo electrónico: </label>
             <input type="email" name="correo" id="correo"><br><br>
             <label for="pastel">Descripción del pastel: </label>
-            <input type="text" name="pastel" id="pastel"><br><br>
+            <input type="text" name="pastel" id="pastel-formulario" readonly><br><br>
             <label for="sabores">Sabores: </label>
-            <input type="text" name="sabores" id="sabores"><br><br>
+            <input type="text" name="sabores" id="sabores-formulario" readonly><br><br>
+            <label for="relleno">Relleno: </label>
+            <input type="text" name="relleno" id="relleno-formulario" readonly><br><br>
             <label for="adornos">Adornos: </label>
-            <input type="text" name="adornos" id="adornos"><br><br>
+            <input type="text" name="adornos" id="adornos-formulario" readonly><br><br>
+            <input type="reset" value="Reestablecer">
+            <input type="submit" name="enviar" id="enviar"value="Enviar pedido"><br><br>
 
         </form>
     </section>
@@ -86,7 +125,7 @@
                 <td>(66) 32 69 1874</td>
             </tr>
             <tr>
-                <td>Hoarios de atención: </td>
+                <td>Horarios de atención: </td>
                 <td>Lunes a Sábado, de 9 am a 7 pm</td>
             </tr>
         </table>
